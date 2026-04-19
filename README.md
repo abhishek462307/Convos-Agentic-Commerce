@@ -11,7 +11,6 @@ Convos is a self-hosted commerce OS for single-merchant brands that want full co
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/abhishek462307/Convos-Agentic-Commerce)
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/abhishek462307/Convos-Agentic-Commerce)
 
-- **Fly.io:** `https://fly.io/docs/apps/`
 - **Docker (self‑host):** `docker compose up --build`
 
 For any platform, you still need a Supabase project and environment configuration.
