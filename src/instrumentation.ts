@@ -2,11 +2,19 @@ export async function register() {
   if (process.env.NEXT_RUNTIME === 'nodejs') {
     const { validateEnv } = await import('@/lib/env');
     validateEnv();
-    await import('../sentry.server.config');
+    try {
+      await import('../sentry.server.config');
+    } catch {
+      // Sentry config is optional in open-source setups
+    }
   }
 
   if (process.env.NEXT_RUNTIME === 'edge') {
-    await import('../sentry.edge.config');
+    try {
+      await import('../sentry.edge.config');
+    } catch {
+      // Sentry config is optional in open-source setups
+    }
   }
 }
 

@@ -6,12 +6,11 @@ Convos is a self‑hosted, single‑merchant commerce application that bundles a
 
 ## Quick deploy links
 
-Replace `<your-repo-url>` with your public GitHub repository URL after you push this repo.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/abhishek462307/Convos-Agentic-Commerce)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/abhishek462307/Convos-Agentic-Commerce)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/abhishek462307/Convos-Agentic-Commerce)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/abhishek462307/Convos-Agentic-Commerce)
 
-- **Vercel:** `https://vercel.com/new/clone?repository-url=<your-repo-url>`
-- **Netlify:** `https://app.netlify.com/start/deploy?repository=<your-repo-url>`
-- **Render:** `https://render.com/deploy?repo=<your-repo-url>`
-- **Railway:** `https://railway.app/new/template?template=<your-repo-url>`
 - **Fly.io:** `https://fly.io/docs/apps/`
 - **Docker (self‑host):** `docker compose up --build`
 
