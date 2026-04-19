@@ -1,6 +1,6 @@
 ![Convos](public/readme-header.png)
 
-Convos is a self‑hosted, single‑merchant commerce application that bundles a storefront, checkout, and merchant dashboard with optional AI‑assisted shopping. It is designed for teams who want full control of data, infrastructure, and brand experience without a hosted SaaS dependency.
+Convos is a self-hosted commerce OS for single-merchant brands that want full control over storefront, checkout, data, and AI-assisted shopping.It combines a production-ready storefront, merchant dashboard, and conversational buying experience without locking you into a hosted SaaS platform.
 
 **License:** AGPL‑3.0‑only. See `LICENSE`.
 
