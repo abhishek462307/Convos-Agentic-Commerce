@@ -1,0 +1,1 @@
+export const PRODUCT_SELECT = 'id,merchant_id,name,description,price,compare_at_price,image_url,badge,category,category_id,stock_quantity,sku,bargain_enabled,bargain_min_price,type,is_gift_card,digital_file_url,digital_file_name,track_quantity,status,created_at' as const;

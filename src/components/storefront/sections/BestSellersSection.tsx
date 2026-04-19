@@ -1,0 +1,71 @@
+"use client"
+
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { SwiggyProductGrid } from '@/components/SwiggyProductCard';
+import { SectionHeader } from '@/components/storefront/shared/SectionHeader';
+import type { SectionSchema } from '@/types/storefront/sections';
+import type { Product, Merchant } from '@/types/storefront/storefront';
+import type { CartItem } from '@/types/storefront/cart';
+
+interface BestSellersSectionProps {
+    section: SectionSchema;
+    filteredProducts: Product[];
+    merchant: Merchant;
+    cart: CartItem[];
+    onSelectProduct: (product: Product) => void;
+    addToCart: (product: Product) => void;
+    onUpdateQuantity?: (id: string, qty: number) => void;
+    onSeeAll: () => void;
+}
+
+export function BestSellersSection({
+    section,
+    filteredProducts,
+    merchant,
+    cart,
+    onSelectProduct,
+    addToCart,
+    onUpdateQuantity,
+    onSeeAll
+}: BestSellersSectionProps) {
+    const badgeBestSellers = filteredProducts.filter((p) => p.badge === 'Best Seller');
+    if (badgeBestSellers.length === 0) return null;
+
+    const bestSellers = badgeBestSellers.slice(0, 8);
+    const hasMore = badgeBestSellers.length > 8;
+
+    if (bestSellers.length === 0) return null;
+
+    return (
+        <div className="mb-6 mt-2">
+            <div className="flex items-center justify-between mb-3">
+                <SectionHeader title={section.title || 'Best Sellers'} sectionId={section.id} showSparkles={false} className="mb-0 flex-1" />
+                {hasMore && (
+                    <Button
+                        variant="link"
+                        className="font-medium text-[11px] h-auto p-0 gap-1"
+                        style={{ color: 'var(--primary)' }}
+                        onClick={onSeeAll}
+                    >
+                        See all <ArrowRight className="w-3 h-3" />
+                    </Button>
+                )}
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+                {bestSellers.map((product) => (
+                    <SwiggyProductGrid
+                        key={product.id}
+                        product={product}
+                        merchant={merchant}
+                        onSelect={onSelectProduct}
+                        onAddToCart={addToCart}
+                        cart={cart}
+                        onUpdateQuantity={onUpdateQuantity}
+                    />
+                ))}
+            </div>
+        </div>
+    );
+}
